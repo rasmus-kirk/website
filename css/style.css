@@ -19,9 +19,23 @@ h1,h2,h3 {
     color:#ccf
   }
 }
-.monero-container {
-  background:gray;
-  max-width:650px;
+.flex {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+#monero-container {
+  background:lightgray;
+  max-width:263px;
   border: 2px solid darkgray;
   border-radius: 5px;
+  word-wrap: break-word;
+
+  -webkit-user-select: all; /* for Safari */
+  user-select: all;
+}
+
+#monero-image {
+  width:150px;
 }
