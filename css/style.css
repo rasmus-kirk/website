@@ -5,9 +5,11 @@ body {
   font:18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color:#444
 }
+
 h1,h2,h3 {
   line-height:1.2
 }
+
 @media (prefers-color-scheme: dark) { 
   body {
     color:#ccc;
@@ -19,19 +21,20 @@ h1,h2,h3 {
     color:#ccf
   }
 }
+
 .flex {
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction: column;
 }
+
 #monero-container {
   background:lightgray;
   max-width:263px;
   border: 2px solid darkgray;
   border-radius: 5px;
   word-wrap: break-word;
-
   -webkit-user-select: all; /* for Safari */
   user-select: all;
 }
