@@ -31,14 +31,15 @@ h1,h2,h3 {
 
 #monero-container {
   background:lightgray;
-  max-width:263px;
+  max-width:24ch;
   border: 2px solid darkgray;
   border-radius: 5px;
+  font-family: monospace, monospace;
   word-wrap: break-word;
   -webkit-user-select: all; /* for Safari */
   user-select: all;
 }
 
 #monero-image {
-  width:150px;
+  width:20vmin;
 }
