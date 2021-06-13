@@ -31,7 +31,7 @@ h1,h2,h3 {
 
 #monero-container {
   background:lightgray;
-  max-width:24ch;
+  max-width:19ch;
   border: 2px solid darkgray;
   border-radius: 5px;
   font-family: monospace, monospace;
