@@ -4,7 +4,7 @@ pkgs.writeShellApplication {
   runtimeInputs = with pkgs; [ pandoc ];
   text = ''
     mkdir -p out
-    cp styling img documents out
+    cp -r ./styling ./documents ./out
     pandoc \
       --standalone \
       --highlight-style styling/gruvbox.theme \
