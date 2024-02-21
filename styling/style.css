@@ -40,7 +40,7 @@ body {
   padding: 1em;
   margin: auto;
   max-width: 38em;
-  background: var(--bg0);
+  background: var(--bge);
 }
 
 a {
