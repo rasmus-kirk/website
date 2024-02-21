@@ -54,17 +54,6 @@ Here is a list of some of my software interests:
 - Linux
 - NixOS
 
-Some inline math $x + 2$ here
-
-$$\Bb + \floor{2} = s$$
-$$
-\begin{aligned}
-  \Bb + \floor{2} &= s
-  &= d
-  &= a
-\end{aligned}
-$$
-
 Some notable projects:
 
 - My [bachelor's project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf"): High Assurance Cryptography - Implementing Bulletproofs in [Hacspec](https://github.com/hacspec/hacspec)
