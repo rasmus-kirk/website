@@ -1,48 +1,224 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	<!-- Thanks to perfectmotherfuckingwebsite.com for css template/inspiration -->
-	<title>Rasmus Kirk</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-	<h1>About me</h1>
-	<p>
-		Hi, I am Rasmus Kirk. I have a bachelors in computer science
-		from Aarhus University, Denmark, and I am working on getting a
-		master degree. I have a part-time job at the cryptocurrency
-		firm, Concordium, as a student worker. I like Rust and
-		Haskell. I am also currently learning Japanese.
-	</p>
-	<p>
-		Here is a list of some of my software interests:
-	</p>
-	<ul>
-		<li>Decentralized Technologies</li>
-		<li>Free and Open Software</li>
-		<li>Functional Programming</li>
-		<li>Linux</li>
-		<li>NixOS</li>
-	</ul>
-	<p>
-		Some notable projects:
-	</p>
-	<ul>
-		<li>
-			My <a href="documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf">bachelor's project</a>:
-			High Assurance Cryptography - Implementing Bulletproofs in <a href="https://github.com/hacspec/hacspec">Hacspec</a>
-		</li>
-		<li>
-			My <a href="https://github.com/rasmus-kirk/nix-home-manager">Nixos configuration</a>
-		</li>
-	</ul>
-	<p>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Rasmus Kirk</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 
-	<h1>Contact</h1>
-	<p>
-		<b>Email:</b> <a href="mailto: mail@rasmuskirk.com">mail@rasmuskirk.com</a> <br>
-		<b>Phone number:</b> +45 50 16 93 79 <br>
-		<b>Matrix:</b> <a href="https://matrix.to/#/@tuisto:matrix.org">@tuisto:matrix.org</a>
-	</p>
-	</body>
+  <style>
+  /*
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }*/
+
+
+  html, body {
+    height: 100%;
+  }
+
+  .topheader {
+    height: 4em;
+    background-color: #066678;
+    color: #faf8e4;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center; /* Align vertical */
+  }
+
+  .topheader span {
+    color: #faf8e4;
+    position: relative;
+    left: 0.4em;
+  }
+
+  .title-test {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #054c5a;
+    height: 2em; 
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 4em;
+    display: flex;
+    align-items: center; /* Align vertical */
+  }
+
+  .topnav a {
+    float: left;
+    color: #458587;
+    text-align: center;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+  .topnav a:hover {
+    background-color: #066678;
+    color: #faf8e4 !important;
+  }
+
+  .topnav a:visited {
+    background-color: #066678;
+    color: #458587;
+  }
+
+  .topnav a.active {
+    background-color: #458587;
+    color: #faf8e4;
+  }
+
+  .topline {
+    background: #458587;
+    height: 0.05em;
+    position: absolute;
+    bottom: 0em;
+    left: 0;
+    width: 100vw;
+    max-width: 100vw;
+    z-index: 1;
+  }
+
+  .topfooter{
+    overflow: hidden;
+    background-color: #458587;
+    height: 0.5em; 
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    display: flex;
+    align-items: center; /* Align vertical */
+  }
+
+  .botfooter {
+    overflow: hidden;
+    background-color: #03333b;
+    color: #faf8e4;
+    height: 1em; 
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0em;
+    display: flex;
+    align-items: center; /* Align vertical */
+  }
+
+  .botfooter span {
+    font-size: 0.7em;
+    padding-left: 0.5em;
+  }
+  </style>
+
+  <link rel="stylesheet" href="styling/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<div class="topheader">
+  <span class="title-test">Rasmus Kirk</span>
+
+  <div class="topline"></div>
+</div>
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="https://nixarr.rasmuskirk.com/">Articles</a>
+  <a href="https://github.com/rasmus-kirk">Github</a>
+  <div class="topline"></div>
+</div>
+
+<h1 id="about-me">About me</h1>
+<p>Hi, I am Rasmus Kirk. I have a bachelors in computer science from
+Aarhus University, Denmark, and I am working on getting a master degree.
+I have a part-time job at the cryptocurrency firm, Concordium, as a
+student worker. I like Rust and Haskell. I am also currently learning
+Japanese.</p>
+<p>Here is a list of some of my software interests:</p>
+<ul>
+<li>Decentralized Technologies</li>
+<li>Free and Open Software</li>
+<li>Functional Programming</li>
+<li>Linux</li>
+<li>NixOS</li>
+</ul>
+<p>Some notable projects:</p>
+<ul>
+<li>My <a
+href="./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf%22">bachelor’s
+project</a>: High Assurance Cryptography - Implementing Bulletproofs in
+<a href="https://github.com/hacspec/hacspec">Hacspec</a></li>
+<li><a href="https://github.com/rasmus-kirk/nixarr">Nixarr</a>: A Nixos
+module that aims to make the installation and management of running the
+“*Arrs” as easy as possible.</li>
+<li><a href="https://github.com/rasmus-kirk/p2p">A toy-blockchain
+written in rust</a></li>
+</ul>
+<h1 id="contact">Contact</h1>
+<ul>
+<li><strong>Email:</strong> mail@rasmuskirk.com</li>
+<li><strong>Phone number:</strong> +45 50 16 93 79</li>
+<li><strong>Matrix:</strong> <a
+href="https://matrix.to/#/@tuisto:matrix.org"><span class="citation"
+data-cites="tuisto:matrix.org">@tuisto:matrix.org</span></a></li>
+</ul>
+
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+<p>asfda as fdas df </p>
+
+<div class="topfooter">
+</div>
+<div class="botfooter">
+
+<span>Rasmus Kirk Jakobsen</span> <span> </span> <span class="date">2024-02-22 - 14:03:49 UTC</span>
+</div>
+
+</body>
 </html>
