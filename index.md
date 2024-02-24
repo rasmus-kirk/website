@@ -1,45 +1,6 @@
 ---
-header: |
-  \usepackage[style=iso]{datetime2}
-  \usepackage{amsmath,bm}
-  \usepackage{emoji}
-  \newcommand*\mod{\bmod}
-  \newcommand*\cat{\mathbin{+\mkern-10mu+}}
-  \newcommand*\bor{\mathbin{\&\mkern-7mu\&}}
-  \newcommand*\xor{\oplus}
-  \newcommand*\Bb{\mathbb{B}}
-  \newcommand*\Zb{\mathbb{Z}}
-  \newcommand*\Nb{\mathbb{N}}
-  \newcommand*\Rb{\mathbb{R}}
-  \newcommand*\Eb{\mathbb{E}}
-  \newcommand*\Gb{\mathbb{G}}
-  \newcommand*\Ac{\mathcal{A}}
-  \newcommand*\Rc{\mathcal{R}}
-  \newcommand*\Oc{\mathcal{O}}
-  \newcommand*\Hc{\mathcal{H}}
-  \newcommand*\a{\alpha}
-  \newcommand*\b{\beta}
-  \newcommand*\d{\delta}
-  \newcommand*\e{\epsilon}
-  \newcommand*\l{\lambda}
-  \newcommand*\beq{\stackrel{?}{=}}
-  \renewcommand*\plainspace{\mathcal{P}}
-  \renewcommand*\cipherspace{\mathcal{C}}
-  \renewcommand*\keyspace{\mathcal{K}}
-  \newcommand*\meq{\stackrel{?}{=}}
-  \newcommand{\qed}{\hfill \ensuremath{\Box}}
-  \newcommand{\enddef}{\hfill \ensuremath{\triangle}}
-  \newcommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
-  \newcommand{\ceil}[1]{\left \lceil #1 \right \rceil }
-  \newcommand{\vec}[1]{ \boldsymbol{#1} }
-  \newcommand{\ran}[1]{ \mathrm{#1} }
-  \newcommand{\ranvec}[1]{ \boldsymbol{\ran{#1}} }
-  \newcommand*\Gen{\textsc{Gen}}
-  \newcommand*\Commit{\textsc{Commit}}
-  \newcommand*\CheckParams{\textsc{CheckParams}}
+title: About me...
 ---
-
-# About me
 
 Hi, I am Rasmus Kirk. I have a bachelors in computer science from Aarhus
 University, Denmark, and I am working on getting a master degree. I have a

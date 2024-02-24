@@ -8,7 +8,7 @@ pkgs.writeShellApplication {
     pandoc \
       --standalone \
       --highlight-style styling/gruvbox.theme \
-      --metadata title="Rasmus Kirk" \
+      --template template.html \
       --metadata date="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
       --css=styling/style.css \
       -V lang=en \

@@ -46,7 +46,7 @@ main {
   position: relative;
 }
 
-header {
+#header {
   background-color: #066678;
   padding: 0.3rem 0;
   color: #faf8e4;
