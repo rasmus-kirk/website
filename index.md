@@ -17,7 +17,7 @@ Here is a list of some of my software interests:
 
 Some notable projects:
 
-- My [bachelor's project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf"): High Assurance Cryptography - Implementing Bulletproofs in [Hacspec](https://github.com/hacspec/hacspec)
+- My [bachelor's project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf): High Assurance Cryptography - Implementing Bulletproofs in [Hacspec](https://github.com/hacspec/hacspec)
 - [A toy-blockchain written in rust](https://github.com/rasmus-kirk/p2p)
 
 # Contact
