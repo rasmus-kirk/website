@@ -438,7 +438,7 @@ table td {
 
 /* show the anchor links in headings if one hovers over the heading. */
 .anchor::before {
-  content: url("/docs/pandoc/link.svg");
+  content: url("/pandoc/link.svg");
   display: inline-block;
   font-size: 1em;
   left: -1.5em;

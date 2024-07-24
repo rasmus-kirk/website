@@ -7,14 +7,6 @@ addEventListener('DOMContentLoaded', () => {
     const onHome = fullpath === location.origin
     const urlIsHome = fullurl === location.origin
 
-    //console.log("fullurl", fullurl);
-    //console.log("fullpath", fullpath);
-    //console.log("locationpathname", location.pathname);
-    //console.log("urlpathname", url.pathname);
-    //console.log("onhome", onHome);
-    //console.log("urlIsHome", urlIsHome);
-    //console.log("")
-
     if (onHome && fullurl === fullpath) {
       el.classList.add('active');
     }

@@ -54,7 +54,8 @@
         };
 
         packages = rec {
-          pandoc = pkgs.callPackage ./mkPandoc.nix {inherit inputs;};
+          pandoc = pkgs.callPackage ./mkPandoc.nix { debug = false; };
+          debug = pkgs.callPackage ./mkPandoc.nix { debug = true; };
           default = pandoc;
         };
 
