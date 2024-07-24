@@ -115,6 +115,14 @@ footer .content {
   overflow-wrap: break-word;
 }
 
+code {
+  border-radius: 5em / 10em;
+  color: var(--bg) !important;
+  background-color: var(--fg0);
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
 a {
   color: var(--ltblue);
   text-decoration: none;

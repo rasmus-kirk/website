@@ -4,13 +4,28 @@ date: 2024-07-24
 keywords: [nix, nixos, linux]
 ---
 
-I feel like a lot of people tend to view [NixOS](https://nixos.org/) as "just
-another distro", and therefore tend to jump straight from Ubuntu/Arch/whatever
-into NixOS, only to then immediately start complaining that the learning
-curve is essentially one big wall. It has certainly been my own experience,
-but I will argue that there are better ways.
+> You're on vacation and you wish to get some food. You find a restaurant,
+> Ubuntu — an unusual name, perhaps African — but it's right next to your
+> hotel. You enjoy the food, and feeling emboldened, you decide to try more
+> places. You venture further out, trying different restaurants like Popos and
+> Arch. Sure, each time the accent is a little heavier and harder to understand,
+> but it's manageable.
+>
+> Finally, one day, you venture further than before and find a charming
+> little place called Nixos. Greek, perhaps? No problem, you think. After your
+> difficulties at Arch’s, this should be a piece of cake. But you quickly
+> realize not a single person there speaks a word of English, not even Google
+> Translate can save you. Desperately, you try to order anything, but nothing
+> comes out right. Humbled, you walk back, cursing the restaurant for your
+> terrible experience.
 
-Nix is definitely not an all or nothing. It essentially functions as a swiss
+Many people tend to view [NixOS](https://nixos.org/) as "just another distro",
+and therefore tend to jump straight from Ubuntu/Arch/whatever into NixOS, only
+to then immediately start complaining that the learning curve is essentially
+one big wall. It has certainly been my own experience, but I will argue that
+there are better ways to approach it.
+
+Nix is definitely not an all-or-nothing. It essentially functions as a swiss
 army knife that addresses the problem of:
 
 > _"software runs on computer A, now make it run the same way on computer B"_
@@ -22,7 +37,7 @@ There are different "levels" of Nix:
   Nix instead. Simply run `nix profile install nixpkgs#cowsay`[^1] to permanently
   install the cowsay package. This is particularly useful on debian-based
   systems, as apt has an annoyingly small package set. Think of it like the
-  AUR for Arch, but on any distro! Even MacOS!
+  AUR for Arch, but on any distro - even MacOS!
 - **Nix as a temporary package manager:** Want to quickly run a package but
   don't want to pollute your system environment with one-off packages? Write
   `nix shell nixpkgs#cowsay` to get a shell environment with the package
