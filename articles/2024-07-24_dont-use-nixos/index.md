@@ -6,7 +6,7 @@ keywords: [nix, nixos, linux]
 
 I feel like a lot of people tend to view [NixOS](https://nixos.org/) as "just
 another distro", and therefore tend to jump straight from Ubuntu/Arch/whatever
-into NixOS, only to then immediatly start complaining that the learning
+into NixOS, only to then immediately start complaining that the learning
 curve is essentially one big wall. It has certainly been my own experience,
 but I will argue that there are better ways.
 
@@ -19,7 +19,7 @@ There are different "levels" of Nix:
 
 - **Nix as a unix package manager:** Nixpkgs has over 80.000 packages so
   instead of using pacman, apt or homebrew to get your packages you can use
-  Nix instead. Simply run `nix profile install nixpkgs#cowsay`[^1] to permenantly
+  Nix instead. Simply run `nix profile install nixpkgs#cowsay`[^1] to permanently
   install the cowsay package. This is particularly useful on debian-based
   systems, as apt has an annoyingly small package set. Think of it like the
   AUR for Arch, but on any distro! Even MacOS!
@@ -35,18 +35,18 @@ There are different "levels" of Nix:
   Nix can run `nix build github:github-account/repo` to build your software.
 - **Nix for a reproducible dotfile managements:** You can use [Home
   Manager](https://github.com/nix-community/home-manager) to create
-  a _declaritive_, _reproducible_ home environment containing all your
+  a _declarative_, _reproducible_ home environment containing all your
   dotfile configurations and all your packages. Quickly get all your tools,
   configured as you want on any unix-system in ~15 minutes.
 - **NixOS for a reproducible linux system:** You can use Nix to configure your
-  entire system: Declaritively install programs, configure and run services
+  entire system: Declaratively install programs, configure and run services
   (Syncthing, Plex, whatever), configure user programs (like a tiling window
-  manager), anything you want to do on a linux system, but _declaritively_.
+  manager), anything you want to do on a linux system, but _declaratively_.
 
 Notice, you don't even have to switch out apt, homebrew or pacman/AUR for Nix,
 nor do you have to manage two package managing states with Nix. You can choose
-to only use it for tempoary package environments (`nix run`/`nix shell`)
-and tempoary developments/build environments (`nix shell`/`nix build`).
+to only use it for temporary package environments (`nix run`/`nix shell`)
+and temporary developments/build environments (`nix shell`/`nix build`).
 
 Starting on a "lower level" of Nix would help out a lot and avoid a lot
 of the more esoteric issues one might have on the "higher levels", while
@@ -99,7 +99,7 @@ got the point from my NixOS point of view, but sitting on PopOS it was a
 lifesaver. I quickly discovered that I could have a "just works" distro with
 80% of the reproducibility and benefits of Nix with 20% of the headaches.
 
-I could create a reproducible, declaritive toolbox using home manager and
+I could create a reproducible, declarative toolbox using home manager and
 let PopOS handle all the boring bells and whistles you'd expect from a modern
 distro. This unfortunately meant that Nix couldn't handle the system-level stuff
 I _do_ want to configure like tweaking PopOS, setting up docker or routing
@@ -136,7 +136,7 @@ Here is some of the uses I happily use Nix for today:
 - Both my home-manager and NixOS configurations are declared in a single
   [Nix flake](https://github.com/rasmus-kirk/nix-home-manager).
 
-Maybe you should use NixOS. I do, afterall, still use it today on my server. In
+Maybe you should use NixOS. I do, after all, still use it today on my server. In
 that context it's excellent, I get to have a declarative server environment
 with top-notch reproducibility, all without using Docker! But just installing
 it on your main work machine is, in my opinion, not the best way to use NixOS,
