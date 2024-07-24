@@ -59,11 +59,11 @@ down and faceplant the concrete below.
 I started using NixOS after having to migrate my Arch configuration,
 and finding everything a complete mess. What had I configured? What had I
 installed? What state did I want to keep? Arch did not give me the proper
-tools to organize this, and I considered writing a bash script that set
-everything up to organize myself. Then I discovered NixOS and knew that this
-was exactly the tool I needed!
+tools to organize this, and I considered writing a bash script myself that set
+everything up. It seemed hacky and error-prone though, but then I discovered
+NixOS and knew that this was exactly the tool I needed!
 
-Learning to use NixOS was tough though. I spent a lot of time just getting
+Learning to use NixOS was rough though. I spent a lot of time just getting
 basic stuff to work, and this was despite coming from Arch. Everything had
 to be done the "Nix Way", and as I maximized for reproducibility, I ended
 up playing whack-a-mole with countless of tedious issues. All of it for
@@ -93,20 +93,21 @@ The entirety of my Linux journey was:
 
 I had arrived back in the land of statefulness and I found myself longing
 for just a little of that sweet reproducibility and declarability that I
-had given up. I then recalled something that I had been researching before,
+had given up. I then recalled something that I had been researching before;
 [Home Manager](https://github.com/nix-community/home-manager). I never really
 got the point from my NixOS point of view, but sitting on PopOS it was a
-lifesaver. I quickly discovered that I could have a "just works" distro with
-80% of the reproducibility and benefits of Nix with 20% of the headaches.
+lifesaver. I quickly discovered that I could have a "Just Works™" distro with
+80% of the benefits of Nix with 20% of the headaches.
 
-I could create a reproducible, declarative toolbox using home manager and
-let PopOS handle all the boring bells and whistles you'd expect from a modern
-distro. This unfortunately meant that Nix couldn't handle the system-level stuff
-I _do_ want to configure like tweaking PopOS, setting up docker or routing
-my traffic through a VPN. Sure, I won't have a 100% reproducibility this way,
-however I save myself from almost all of the headaches. If anything should fail
-the "Nix Way" I could easily fall back on statefully installing or configuring
-whatever program I needed on the fly, so I always had an "escape hatch".
+I could create a reproducible, declarative toolbox using home manager
+and let PopOS handle all the boring bells and whistles you'd expect from
+a modern distro. This unfortunately meant that Nix couldn't handle the
+system-level stuff that I _do_ want to configure, like tweaking PopOS,
+setting up docker or routing my traffic through a VPN. Sure, I won't have
+a 100% reproducibility this way, however I save myself from almost all of
+the pains I had previously. If anything should fail the "Nix Way" I could
+easily fall back on statefully installing or configuring whatever program
+I needed on the fly, so I always had an "escape hatch".
 
 I gained the ability to bring my toolbox on any unix[^2] machine with just
 two commands:
@@ -120,35 +121,34 @@ two commands:
 ```
 
 This is great! I can now have my toolbox on my work laptop, home laptop,
-NAS or even my steam deck, no matter the flavor of linux they're running.
+NAS or even my Steam Deck, no matter the flavor of linux they're running.
 
 Here is some of the uses I happily use Nix for today:
 
 - As a build-tool geared for reproducibility for various software projects
 - I use a [Nix
   flake](https://gist.github.com/rasmus-kirk/c56267f2256a5b1326eefdcb2da33d92)
-  to reproducibly compile pandoc-flavoured markdown into a pdf[^3]. It can also
+  to reproducibly compile pandoc-flavoured markdown into pdf's[^3]. It can also
   run a script that waits for `$file.md` files to change and then compile
   it into `$file.pdf`.
 - I use Home Manager to manage all my dotfiles and user-level packages.
-- I use NixOS on my Raspberry Pi NAS to self-host various services. NixOS
-  has been a very nice experience when used as a server environment.
+- I use NixOS on my Raspberry Pi NAS to self-host various services.
 - Both my home-manager and NixOS configurations are declared in a single
   [Nix flake](https://github.com/rasmus-kirk/nix-home-manager).
 
-Maybe you should use NixOS. I do, after all, still use it today on my server. In
-that context it's excellent, I get to have a declarative server environment
-with top-notch reproducibility, all without using Docker! But just installing
-it on your main work machine is, in my opinion, not the best way to use NixOS,
-nor is it the best way to get into Nix. It should be reserved for situations
-where there's clear benefits or for enthusiasts.
+_Maybe_ you should use NixOS. I do, after all, still use it today on my
+server. In that context it's excellent, I get to have a declarative server
+environment with top-notch reproducibility, all without using Docker! But
+just installing it on your main work machine is, in my opinion, not the
+best way to use NixOS, nor is it the best way to get into Nix. It should be
+reserved for situations where there's clear benefits or for enthusiasts.
 
 Using Nix is software heaven when it works, but as soon as you stray from the
 "happy path" you quickly find your way to software hell. While I learned a
 lot from my own journey, and _now_ certainly find myself comfortable using
 this complicated, messy but altogether wonderful tool, I find that some
 people new to Nix are tempted to follow the same path that I did, but the
-"hard way" isn't always better. So don't use NixOS, _use Nix_.
+"hard way" isn't always best way. So don't use NixOS, _use Nix_.
 
 > This article is also available [in raw markdown](./index.md)
 
