@@ -66,6 +66,9 @@
                 $for(author)$
                 <p class="author">$author$</p>
                 $endfor$
+                $if(date)$
+                <h3 class="date">$date$</h3>
+                $endif$
                 $if(abstract)$
                 <div class="abstract">
                     <div class="abstract-title">$abstract-title$</div>
@@ -92,8 +95,8 @@
                 <div>
                     Rasmus Kirk Jakobsen
                 </div>
-                $if(date)$
-                    <div>$date$</div>
+                $if(timestamp)$
+                    <div>$timestamp$</div>
                 $endif$
             </div>
         </footer>

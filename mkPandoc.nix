@@ -41,6 +41,7 @@ pkgs.stdenv.mkDerivation {
         --highlight-style pandoc/gruvbox.theme \
         --css "$css" \
         --lua-filter pandoc/lua/anchor-links.lua \
+        --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
         --template pandoc/template.html \
         -V lang=en \
         -V --mathjax \
@@ -58,7 +59,7 @@ pkgs.stdenv.mkDerivation {
       --standalone \
       --highlight-style pandoc/gruvbox.theme \
       --template pandoc/template.html \
-      --metadata date="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
+      --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
       --css "$css" \
       -V lang=en \
       -V --mathjax \
@@ -70,7 +71,7 @@ pkgs.stdenv.mkDerivation {
       --standalone \
       --highlight-style pandoc/gruvbox.theme \
       --template pandoc/template.html \
-      --metadata date="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
+      --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
       --css "$css" \
       -V lang=en \
       -V --mathjax \

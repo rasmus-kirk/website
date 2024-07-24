@@ -1,16 +1,17 @@
 ---
 title: Don't use NixOS
 date: 2024-07-24
+keywords: [nix, nixos, linux]
 ---
 
-I feel like a lot of people tend to view Nix/NixOS as "just another distro",
-and therefore tend to jump straight from Ubuntu/Arch/whatever into NixOS, only
-to then immediatly start complaining that the learning curve is essentially
-one big wall. It has certainly been my own experience, but I will argue that
-there are better ways.
+I feel like a lot of people tend to view [NixOS](https://nixos.org/) as "just
+another distro", and therefore tend to jump straight from Ubuntu/Arch/whatever
+into NixOS, only to then immediatly start complaining that the learning
+curve is essentially one big wall. It has certainly been my own experience,
+but I will argue that there are better ways.
 
-Nix is definitely not an all or nothing. It's essentially functions as a
-swiss army knife that addresses the problem of:
+Nix is definitely not an all or nothing. It essentially functions as a swiss
+army knife that addresses the problem of:
 
 > _"software runs on computer A, now make it run the same way on computer B"_
 
@@ -32,17 +33,18 @@ There are different "levels" of Nix:
   dependencies (package that may be default on Ubuntu but not on Arch!). You
   can include a Nix flake in your repo with build instructions such that anyone with
   Nix can run `nix build github:github-account/repo` to build your software.
-- **Nix for a reproducible dotfile managements:** You can use Home Manager
-  (nix module) to create a _declaritive_, _reproducible_ home environment
-  containing all your dotfile configurations and all your packages. Quickly get
-  all your tools, configured as you want on any unix-system in ~15 minutes.
+- **Nix for a reproducible dotfile managements:** You can use [Home
+  Manager](https://github.com/nix-community/home-manager) to create
+  a _declaritive_, _reproducible_ home environment containing all your
+  dotfile configurations and all your packages. Quickly get all your tools,
+  configured as you want on any unix-system in ~15 minutes.
 - **NixOS for a reproducible linux system:** You can use Nix to configure your
   entire system: Declaritively install programs, configure and run services
   (Syncthing, Plex, whatever), configure user programs (like a tiling window
   manager), anything you want to do on a linux system, but _declaritively_.
 
 Notice, you don't even have to switch out apt, homebrew or pacman/AUR for Nix,
-nor do you have to manage two package manager states with Nix. You can choose
+nor do you have to manage two package managing states with Nix. You can choose
 to only use it for tempoary package environments (`nix run`/`nix shell`)
 and tempoary developments/build environments (`nix shell`/`nix build`).
 
@@ -128,15 +130,18 @@ Here is some of the uses I happily use Nix for today:
   to reproducibly compile pandoc-flavoured markdown into a pdf[^3]. It can also
   run a script that waits for `$file.md` files to change and then compile
   it into `$file.pdf`.
-- I use [Home Manager](https://github.com/nix-community/home-manager) to
-  manage all my dotfiles and user-level packages.
+- I use Home Manager to manage all my dotfiles and user-level packages.
 - I use NixOS on my Raspberry Pi NAS to self-host various services. NixOS
   has been a very nice experience when used as a server environment.
 - Both my home-manager and NixOS configurations are declared in a single
   [Nix flake](https://github.com/rasmus-kirk/nix-home-manager).
 
-Maybe you should use NixOS, but just installing it on your main work machine
-is in my opinion not the best way to get into Nix.
+Maybe you should use NixOS. I do, afterall, still use it today on my server. In
+that context it's excellent, I get to have a declarative server environment
+with top-notch reproducibility, all without using Docker! But just installing
+it on your main work machine is, in my opinion, not the best way to use NixOS,
+nor is it the best way to get into Nix. It should be reserved for situations
+where there's clear benefits or for enthusiasts.
 
 Using Nix is software heaven when it works, but as soon as you stray from the
 "happy path" you quickly find your way to software hell. While I learned a
@@ -149,7 +154,7 @@ people new to Nix are tempted to follow the same path that I did, but the
 
 [^1]: Note that this is using the "new" experimental features: `nix-command`
       and `flakes`.
-[^2]: If I ran MacOS then not _all_ packages will be available, but you get
-      the point.
+[^2]: If I ran MacOS then not _all_ packages will be available, as the
+      program itself needs to also target Darwin, but you get the point.
 [^3]: On that same note, I am using Nix and pandoc-flavored markdown to
       build this very site!

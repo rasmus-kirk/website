@@ -362,7 +362,12 @@ table td {
 
 .author {
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
+}
+
+.date {
+  font-size: 1.2em;
+  text-align: left;
 }
 
 @media print {
