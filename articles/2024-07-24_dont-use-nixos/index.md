@@ -6,12 +6,12 @@ keywords: [nix, nixos, linux]
 
 > You're on vacation and you wish to get some food. You find a restaurant,
 > Ubuntu — an unusual name, perhaps African — but it's right next to your
-> hotel. You enjoy the food, and feeling emboldened, you decide to try more
+> hotel. You enjoy the food and, feeling emboldened, you decide to try more
 > places. You venture further out, trying different restaurants like Popos and
 > Arch. Sure, each time the accent is a little heavier and harder to understand,
 > but it's manageable.
 >
-> Finally, one day, you venture further than before and find a charming
+> Finally, one day, you venture further than ever before and find a charming
 > little place called Nixos. Greek, perhaps? No problem, you think. After your
 > difficulties at Arch’s, this should be a piece of cake. But you quickly
 > realize not a single person there speaks a word of English, not even Google
@@ -22,7 +22,7 @@ keywords: [nix, nixos, linux]
 Many people tend to view [NixOS](https://nixos.org/) as "just another distro",
 and therefore tend to jump straight from Ubuntu/Arch/whatever into NixOS, only
 to then immediately start complaining that the learning curve is essentially
-one big wall. It has certainly been my own experience, but I will argue that
+a great cliff. It has certainly been my own experience, but I will argue that
 there are better ways to approach it.
 
 Nix is definitely not an all-or-nothing. It essentially functions as a swiss
@@ -61,7 +61,7 @@ There are different "levels" of Nix:
 Notice, you don't even have to switch out apt, homebrew or pacman/AUR for Nix,
 nor do you have to manage two package managing states with Nix. You can choose
 to only use it for temporary package environments (`nix run`/`nix shell`)
-and temporary developments/build environments (`nix shell`/`nix build`).
+and temporary developments/build environments (`nix develop`/`nix build`).
 
 Starting on a "lower level" of Nix would help out a lot and avoid a lot
 of the more esoteric issues one might have on the "higher levels", while
@@ -166,6 +166,9 @@ people new to Nix are tempted to follow the same path that I did, but the
 "hard way" isn't always best way. So don't use NixOS, _use Nix_.
 
 > This article is also available [in raw markdown](./index.md)
+
+> Discuss at [Hacker News](https://news.ycombinator.com/item?id=41057688)
+  or [Reddit](https://old.reddit.com/r/NixOS/comments/1eb6tcf/dont_use_nixos/)
 
 [^1]: Note that this is using the "new" experimental features: `nix-command`
       and `flakes`.
