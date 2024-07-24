@@ -28,8 +28,7 @@
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {
       inherit inputs;
-    }
-    rec {
+    } {
       imports = with inputs; [
         flake-root.flakeModule
         treefmt-nix.flakeModule
@@ -54,8 +53,9 @@
           };
         };
 
-        packages = {
+        packages = rec {
           pandoc = pkgs.callPackage ./mkPandoc.nix {inherit inputs;};
+          default = pandoc;
         };
 
         devshells.default = {

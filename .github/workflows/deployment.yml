@@ -34,7 +34,9 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
 
-      - run: nix run .#pandoc
+      - run: nix build
+
+      - run: mkdir -p out && cp -r ./result/* out
 
       - name: Store pandoc
         uses: ./.github/actions/upload-artifact
