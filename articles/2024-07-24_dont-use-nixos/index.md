@@ -151,12 +151,14 @@ Here is some of the uses I happily use Nix for today:
 - Both my home-manager and NixOS configurations are declared in a single
   [Nix flake](https://github.com/rasmus-kirk/nix-home-manager).
 
-_Maybe_ you should use NixOS. I do, after all, still use it today on my
+Okay, maybe you _should_ use NixOS. I do, after all, still use it today on my
 server. In that context it's excellent, I get to have a declarative server
 environment with top-notch reproducibility, all without using Docker! But
 just installing it on your main work machine is, in my opinion, not the
 best way to use NixOS, nor is it the best way to get into Nix. It should be
-reserved for situations where there's clear benefits or for enthusiasts.
+reserved for situations where there's clear benefits or for enthusiasts. If
+you already use NixOS and you're happy with your choice, I see no reason to
+change your workflow, but I benefitted from changing mine.
 
 Using Nix is software heaven when it works, but as soon as you stray from the
 "happy path" you quickly find your way to software hell. While I learned a

@@ -3,7 +3,7 @@ title: About me
 ---
 
 Hi, I am Rasmus Kirk. I have a bachelors in computer science from Aarhus
-University, Denmark, and I am working on getting a master degree. I have a
+University, Denmark, and I am working on getting a masters degree. I have a
 part-time job at the cryptocurrency firm, Concordium, as a student worker. I
 like Rust and Haskell. I am also currently learning Japanese.
 
@@ -19,6 +19,7 @@ Some notable projects:
 
 - My [bachelor's project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf): High Assurance Cryptography - Implementing Bulletproofs in [Hacspec](https://github.com/hacspec/hacspec)
 - [A toy-blockchain written in rust](https://github.com/rasmus-kirk/p2p)
+- [Nixarr](https://nixarr.com): A Nixos module that aims to make the installation and management of a home media server as easy, and pain free, as possible.
 
 # Contact
 
