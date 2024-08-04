@@ -18,7 +18,8 @@ pkgs.stdenv.mkDerivation {
     fi
 
     mkdir -p $out/articles
-    cp -r ./articles ./pandoc ./documents $out
+
+    cp -r ./articles ./pandoc ./documents ./stuff $out
 
     buildarticle () {
       file_path="$1"
@@ -52,6 +53,11 @@ pkgs.stdenv.mkDerivation {
 
     # Make wiki pages
     find articles -type f -name "*.md" | while IFS= read -r file; do
+      buildarticle "$file"
+    done
+
+    # Make stuff
+    find stuff -type f -name "*.md" | while IFS= read -r file; do
       buildarticle "$file"
     done
 
