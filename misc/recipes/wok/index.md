@@ -2,6 +2,8 @@
 title: Wok
 ---
 
+![Wok](./wok.png){ width=50% }
+
 I usually fry in butter or olive oil, but you can use whatever fats you
 prefer. I also prefer frozen precut garlic for convenience. I personally
 don't add salt at the end, and prefer to add a bit more soy sauce if I don't
