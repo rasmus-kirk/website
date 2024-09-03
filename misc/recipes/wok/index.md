@@ -1,8 +1,9 @@
 ---
 title: Wok
+subtitle: _Dish for 4 people_
 ---
 
-![Wok](./wok.png){ width=50% }
+![Finished dish](./wok.png){ width=50% }
 
 I usually fry in butter or olive oil, but you can use whatever fats you
 prefer. I also prefer frozen precut garlic for convenience. I personally

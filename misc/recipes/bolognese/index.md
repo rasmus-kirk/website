@@ -1,5 +1,6 @@
 ---
 title: Bolognese
+subtitle: _Dish for 4 people_
 ---
 
 **Ingredients:**
