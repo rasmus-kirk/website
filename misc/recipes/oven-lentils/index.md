@@ -27,3 +27,5 @@ subtitle: _Dish for 4 people_
   - The frozen vegetables
 4. Spread grated parmesan, salt and pepper on the chicken thighs.
 5. Cook the dish in the oven for ~40 minutes at 200 degrees celsius.
+
+> View this page [in markdown](./index.md)

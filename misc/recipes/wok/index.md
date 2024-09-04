@@ -41,3 +41,5 @@ feel it's salty enough.
    - Coconut milk
    - Garlic
    - Salt and pepper to taste
+
+> View this page [in markdown](./index.md)

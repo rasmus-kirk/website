@@ -37,3 +37,5 @@ sauce is too watery, uncover and let it reduce while preparing the spaghetti.
 Cook the spaghetti according to the package instructions. Serve the pasta
 in deep plates with the bolognese sauce, a drizzle of olive oil, and plenty
 of freshly grated Parmesan cheese.
+
+> View this page [in markdown](./index.md)
