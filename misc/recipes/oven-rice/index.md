@@ -3,6 +3,8 @@ title: Oven Rice
 subtitle: _Dish for 4 people_
 ---
 
+![Finished Dish](./oven-rice.png){ width=50% }
+
 **Ingredients:**
 
 - 1 L water
