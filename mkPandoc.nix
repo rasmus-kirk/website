@@ -1,88 +1,106 @@
-{pkgs, debug, ...}:
-pkgs.stdenv.mkDerivation {
-  name = "buildpandoc";
-  src = ./.;
-  buildInputs = with pkgs; [pandoc];
-  phases = ["unpackPhase" "buildPhase"];
-  buildPhase = ''
-    debug=${toString debug}
-    css="/pandoc/style.css"
+{ pkgs, debug ? false }: let
+  loopOut = "out";
+in rec {
+  dependencies = with pkgs; [ pandoc ];
 
-    mkdir $out
-    echo $debug >> $out/log.log
+  script = pkgs.writeShellApplication {
+    name = "mk-pandoc";
 
-    if [ "$debug" = 1 ] ; then
-      css=$out/pandoc/style.css
-    else
+    runtimeInputs = dependencies;
+
+    text = ''
+      out=$1
+      debug=${toString debug}
       css="/pandoc/style.css"
-    fi
 
-    mkdir -p $out/articles
+      mkdir -p "$out"
+      mkdir -p "$out"/articles
 
-    cp -r ./articles ./pandoc ./documents ./misc $out
+      cp -r ./articles ./pandoc "$out"
 
-    buildarticle () {
-      file_path="$1"
-      filename=$(basename -- "$file_path")
-      dir_path=$(dirname "$file_path")
-      filename_no_ext="''${filename%.*}"
+      buildarticle () {
+        file_path="$1"
+        filename=$(basename -- "$file_path")
+        dir_path=$(dirname "$file_path")
+        filename_no_ext="''${filename%.*}"
 
-      if [ "$debug" = 1 ] ; then
-        echo $file_path >> $out/log.log
-        echo $filename >> $out/log.log
-        echo $dir_path >> $out/log.log
-        echo $filename_no_ext >> $out/log.log
-        echo "" >> $out/log.log
-      fi
+        if [ "$debug" = 1 ] ; then
+          { 
+            echo "$file_path"
+            echo "$filename"
+            echo "$dir_path"
+            echo "$filename_no_ext"
+            echo ""
+          } >> "$out"/log.log
+        fi
 
-      mkdir -p "$out"/"$dir_path"
+        mkdir -p "$out"/"$dir_path"
+
+        pandoc \
+          --standalone \
+          --highlight-style pandoc/gruvbox-light.theme \
+          --css "$css" \
+          --lua-filter pandoc/lua/anchor-links.lua \
+          --metadata debug="$debug" \
+          --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
+          --template pandoc/template.html \
+          -V lang=en \
+          -V --mathjax \
+          -f markdown+smart \
+          -o "$out"/"$dir_path"/"$filename_no_ext".html \
+          "$file_path"
+      }
+
+      # Make wiki pages
+      find articles -type f -name "*.md" | while IFS= read -r file; do
+        buildarticle "$file"
+      done
+
+      # Make misc
+      find misc -type f -name "*.md" | while IFS= read -r file; do
+        buildarticle "$file"
+      done
 
       pandoc \
         --standalone \
-        --highlight-style pandoc/gruvbox-dark.theme \
-        --css "$css" \
-        --lua-filter pandoc/lua/anchor-links.lua \
-        --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
+        --highlight-style pandoc/gruvbox-light.theme \
         --template pandoc/template.html \
+        --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
+        --css "$css" \
         -V lang=en \
         -V --mathjax \
         -f markdown+smart \
-        -o $out/"$dir_path"/"$filename_no_ext".html \
-        "$file_path"
-    }
+        -o "$out"/index.html \
+        index.md
+      '';
+  };
 
-    # Make wiki pages
-    find articles -type f -name "*.md" | while IFS= read -r file; do
-      buildarticle "$file"
-    done
+  loop = pkgs.writeShellApplication {
+    name = "mk-pandoc-loop";
+    runtimeInputs = [ pkgs.fswatch script pkgs.fd ];
+    text = ''
+      set +e
+      echo "Listening for file changes"
+      fd --extension md | xargs fswatch --event Updated | xargs -n 1 sh -c "date '+%Y-%m-%d - %H:%M:%S %Z'; mk-pandoc ${loopOut}"
+    '';
+  };
 
-    # Make misc
-    find misc -type f -name "*.md" | while IFS= read -r file; do
-      buildarticle "$file"
-    done
+  server = pkgs.writeShellApplication {
+    name = "mk-pandoc-server";
+    runtimeInputs = [ pkgs.python3 ];
+    text = ''
+      mkdir -p ${loopOut}
+      cd ${loopOut}
+      python -m http.server --bind 127.0.0.1 
+    '';
+  };
 
-    pandoc \
-      --standalone \
-      --highlight-style pandoc/gruvbox-dark.theme \
-      --template pandoc/template.html \
-      --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
-      --css "$css" \
-      -V lang=en \
-      -V --mathjax \
-      -f markdown+smart \
-      -o $out/index.html \
-      index.md
-
-    pandoc \
-      --standalone \
-      --highlight-style pandoc/gruvbox-dark.theme \
-      --template pandoc/template.html \
-      --metadata timestamp="$(date -u '+%Y-%m-%d - %H:%M:%S %Z')" \
-      --css "$css" \
-      -V lang=en \
-      -V --mathjax \
-      -f markdown+smart \
-      -o $out/articles/index.html \
-      articles/index.md
-  '';
+  package = pkgs.stdenv.mkDerivation {
+    name = "mk-pandoc-package";
+    src = ./.;
+    buildInputs = [ script ];
+    phases = ["unpackPhase" "buildPhase"];
+    buildPhase = "${pkgs.lib.getExe script} $out";
+  };
 }
+

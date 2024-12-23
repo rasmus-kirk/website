@@ -13,6 +13,7 @@ Here is a list of some of my software interests:
 
 - Decentralized Technologies
 - Cryptography
+- Zero-Knowledge Proofs
 - Free and Open Software
 - Functional Programming
 - Linux
@@ -20,18 +21,21 @@ Here is a list of some of my software interests:
 
 Some notable projects:
 
-- My [bachelor's 
-  project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf):
-  High Assurance Cryptography - Implementing Bulletproofs in
-  [Hacspec](https://github.com/hacspec/hacspec)
-- [A Rust Toy-Blockchain](https://github.com/rasmus-kirk/p2p): A toy blockchain
-  project based on the exercises from the course "Distributed Systems and
-  Security" from Aarhus University.
-- [Nixarr](https://nixarr.com): A Nixos module that aims to make the
-  installation and management of a home media server as easy, and pain free,
-  as possible.
-- [Submerger](https://github.com/rasmus-kirk/submerger): Combines subtitles
-  from two files into one, with customizable position and color settings.
+- [My bachelor's project](./documents/high-assurance-cryptography-implementing-bulletproofs-in-hacspec.pdf):
+  High Assurance Cryptography - Implementing Bulletproofs in [Hacspec](https://github.com/hacspec/hacspec)
+- [A Rust Toy-Blockchain](https://github.com/rasmus-kirk/p2p):
+  A toy blockchain project based on the exercises from the course "Distributed
+  Systems and Security" from Aarhus University.
+- [Halo2 Accumulation in Rust](https://github.com/rasmus-kirk/halo-accumulation):
+  A Rust implementation of the accumulation scheme used in halo2. The repo
+  also contains a report explaining the background, theory and implementation
+  details of the project.
+- [Nixarr](https://nixarr.com):
+  A Nixos module that aims to make the installation and management of a home
+  media server as easy, and pain free, as possible.
+- [Submerger](https://github.com/rasmus-kirk/submerger):
+  Combines subtitles from two files into one, with customizable position
+  and color settings.
 
 Feel free to explore my projects and reach out if you have any questions.
 
