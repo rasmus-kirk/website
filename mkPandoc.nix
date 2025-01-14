@@ -16,7 +16,7 @@ in rec {
       mkdir -p "$out"
       mkdir -p "$out"/articles
 
-      cp -r ./articles ./pandoc "$out"
+      cp -r ./articles ./pandoc ./misc "$out"
 
       buildarticle () {
         file_path="$1"

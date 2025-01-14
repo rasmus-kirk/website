@@ -17,6 +17,8 @@ list of my recipes:
 - [Wok](./wok)
 - [Oven Lentils](./oven-lentils)
 - [Oven Rice](./oven-rice)
+- [Creamed Spinach with Chickpeas and Bacon](./creamed-spinach)
+- [Beige Stew](./beige-stew)
 
-See also the [Mega Cookbook](./mega-cookbook); A recipes me and some friends
-made when we moved out from our parents, with absurdly large portions.
+See also the [Mega Cookbook](./mega-cookbook); Some recipes me and some
+friends made when we moved out from our parents, with absurdly large portions.
