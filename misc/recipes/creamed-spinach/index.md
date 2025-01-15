@@ -6,8 +6,9 @@ subtitle: _Dish for 4 people_
 **Ingredients:**
 
 - 40 g flour  
-- 25 g butter  
+- 15 g butter  
 - 500 g frozen spinach  
+- 250 ml of cooking cream
 - 500 g chickpeas (drained weight)  
 - 200 g diced bacon  
 - Salt  
@@ -17,10 +18,14 @@ subtitle: _Dish for 4 people_
 
 **Steps:**
 
-1. Melt the butter in a pot. Stir in the flour.  
-2. Gradually add cream while whisking.  
-3. Let the sauce cook for about 2 minutes while stirring.  
-4. Fry the bacon in a pan on the side.  
-5. Add the spinach and heat the stew thoroughly.  
-6. Add the bacon, chickpeas, spices, and bouillon.  
-7. Optionally, add a bit of water if you want a thinner stew.  
+1. Fry the bacon in a large pot.
+2. When done. Remove bacon and keep the leftover fat.
+3. Melt the butter into the pot at medium-low heat.
+4. Stir in the flour bit by bit.
+5. Gradually add cream while stirring.
+6. Let the sauce cook for about 2 minutes while stirring.
+7. Add the spinach and buillion and heat the stew thoroughly.
+8. Add the bacon, chickpeas, spices.
+9. Optionally, add a bit of water or milk if you want a thinner stew.
+
+> View this page [in markdown](./index.md)

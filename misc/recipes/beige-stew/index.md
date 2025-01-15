@@ -22,3 +22,5 @@ subtitle: _Dish for 4 people_
 4. Fry the onions, then take them off the heat into the bowl.
 5. Fry the bacon, then take them off the heat into the bowl.
 6. Put everything in the bowl and all other unused ingredients in the bowl and let it stew for 10 minutes.
+
+> View this page [in markdown](./index.md)
