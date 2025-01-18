@@ -209,7 +209,7 @@ the relevant man page:
   man home-configuration.nix
 ```
 
-Or you can use a browser version [a browser
+Or you can use [a browser
 version](https://home-manager-options.extranix.com/). To
 learn more about Home-Manager, you should really read [the
 manual](https://nix-community.github.io/home-manager/index.xhtml),
