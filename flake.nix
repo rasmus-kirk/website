@@ -1,8 +1,15 @@
 {
   description = "Flake for building my website";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+  inputs.website-builder.url = "github:rasmus-kirk/website-builder";
 
-  outputs = {nixpkgs, ...}: let
+  outputs = {nixpkgs, website-builder, ...}: let
+    website = pkgs: debug: website-builder.lib {
+      pkgs = pkgs;
+      articleDirs = [ ./articles ./misc ];
+      standalonePages = [{ inputFile = ./index.md; }];
+      debug = debug;
+    };
     supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
     forAllSystems = f:
       nixpkgs.lib.genAttrs supportedSystems (system:
@@ -11,8 +18,8 @@
         });
   in {
     packages = forAllSystems ({pkgs}: let 
-      mkPandoc = import ./mkPandoc.nix { pkgs = pkgs; };
-      mkPandocDebug = import ./mkPandoc.nix { pkgs = pkgs; debug = true; };
+      mkPandoc = website pkgs false;
+      mkPandocDebug = website pkgs true;
     in rec {
       pandoc = mkPandoc.package;
       debug = mkPandocDebug.package;
@@ -20,13 +27,11 @@
     });
 
     devShells = forAllSystems ({pkgs}: let 
-      mkPandocDebug = import ./mkPandoc.nix { pkgs = pkgs; debug = true; };
+      mkPandocDebug = website pkgs true;
     in {
       default = pkgs.mkShell {
         buildInputs = [ 
-          mkPandocDebug.script
           mkPandocDebug.loop
-          mkPandocDebug.server
         ];
       };
     });
