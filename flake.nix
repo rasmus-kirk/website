@@ -31,7 +31,7 @@
           { title = "About"; location = "/"; }
           { title = "Articles"; location = "/articles"; }
           { title = "Misc"; location = "/misc"; }
-          { title = "Github"; location = "https://github.com/rasmus-kirk/nix-config"; }
+          { title = "Github"; location = "https://github.com/rasmus-kirk"; }
         ];
       };
     in {
