@@ -16,19 +16,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1736012469,
-        "narHash": "sha256-/qlNWm/IEVVH7GfgAIyP6EsVZI6zjAx1cV5zNyrs+rI=",
-        "path": "/nix/store/khbvilmsrv4l69nwd52h27j1mp44a0xi-source",
-        "rev": "8f3e1f807051e32d8c95cd12b9b421623850a34d",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -37,14 +24,16 @@
     },
     "website-builder": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1737331279,
-        "narHash": "sha256-6CnfGyL6IkAmGqBUL3LBAtr4txsbK0JQS486xEa3BU8=",
+        "lastModified": 1737501704,
+        "narHash": "sha256-yhbvqVZLT/KFJAOKINvWFYnODeKU8o2hDD5OLUGdZQ8=",
         "owner": "rasmus-kirk",
         "repo": "website-builder",
-        "rev": "f75f14f4b4c01b5a9b04fdb4dd85f26f100f3a84",
+        "rev": "5a3ce8d33bb6fa1ecf3fff07e029c41f6d7af8e8",
         "type": "github"
       },
       "original": {
