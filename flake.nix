@@ -13,25 +13,37 @@
     website-builder,
     ...
   }: let
-    supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+    supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
     forAllSystems = f:
       nixpkgs.lib.genAttrs supportedSystems (system:
         f {
           pkgs = import nixpkgs {inherit system;};
         });
   in {
-    packages = forAllSystems ({pkgs}: let 
+    packages = forAllSystems ({pkgs}: let
       website = website-builder.lib {
         pkgs = pkgs;
         src = ./.;
         headerTitle = "Rasmus Kirk";
-        articleDirs = [ "articles" "misc" ];
-        standalonePages = [{ inputFile = ./index.md; }];
+        articleDirs = ["articles" "misc"];
+        standalonePages = [{inputFile = ./index.md;}];
         navbar = [
-          { title = "About"; location = "/"; }
-          { title = "Articles"; location = "/articles"; }
-          { title = "Misc"; location = "/misc"; }
-          { title = "Github"; location = "https://github.com/rasmus-kirk"; }
+          {
+            title = "About";
+            location = "/";
+          }
+          {
+            title = "Articles";
+            location = "/articles";
+          }
+          {
+            title = "Misc";
+            location = "/misc";
+          }
+          {
+            title = "Github";
+            location = "https://github.com/rasmus-kirk";
+          }
         ];
       };
     in {
