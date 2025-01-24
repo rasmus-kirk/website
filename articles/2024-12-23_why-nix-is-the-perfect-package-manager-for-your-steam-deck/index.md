@@ -4,6 +4,17 @@ date: 2024-12-23
 keywords: [nix, steamdeck, linux]
 ---
 
+> **TLDR:** Three big reasons to consider Nix for your Steam Deck:
+>
+> 1. Not all packages are available as Flatpaks, Nixpkgs is the largest Linux
+>    package repository by far with 120 000 packages, and is therefore a
+>    nice supplement, or replacement, to Flatpaks.
+> 2. Services can be set up in a single line using Home-manager
+>    (`services.syncthing.enable`), which is MUCH easier than [configuring
+>    systemd-services yourself](https://www.reddit.com/r/SteamDeck/comments/vocyi5/start_syncthing_automatically_on_steamdeck_even/).
+> 3. Reproducible setups with Home Manager, allowing you to replicate packages
+>    and configuration between your main machine and your Steam Deck.
+
 In this article I'd like to show how to get Nix working on your Steam Deck
 and explain why you might want to. Firstly, you need to install Nix. I've seen
 a lot of people struggling using the official Nix installer, [this guide for
