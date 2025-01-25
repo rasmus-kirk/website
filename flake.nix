@@ -25,6 +25,7 @@
         pkgs = pkgs;
         src = ./.;
         headerTitle = "Rasmus Kirk";
+        includedDirs = [ "documents" ];
         articleDirs = ["articles" "misc"];
         standalonePages = [{inputFile = ./index.md;}];
         navbar = [
