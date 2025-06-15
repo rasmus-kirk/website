@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737501704,
-        "narHash": "sha256-yhbvqVZLT/KFJAOKINvWFYnODeKU8o2hDD5OLUGdZQ8=",
+        "lastModified": 1750076849,
+        "narHash": "sha256-si3V9rU0U9PXQ6/+h6CnnXFpBJCdYTnykx3+6bRtymU=",
         "owner": "rasmus-kirk",
         "repo": "website-builder",
-        "rev": "5a3ce8d33bb6fa1ecf3fff07e029c41f6d7af8e8",
+        "rev": "437ab27159ca0b0f0675cd5890fdafeac385b25d",
         "type": "github"
       },
       "original": {
