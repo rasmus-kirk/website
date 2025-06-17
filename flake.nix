@@ -9,6 +9,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     website-builder,
     ...
@@ -23,7 +24,8 @@
     packages = forAllSystems ({pkgs}: let
       website = website-builder.lib {
         pkgs = pkgs;
-        src = ./.;
+        src = self;
+        timestamp = self.lastModified;
         headerTitle = "Rasmus Kirk";
         includedDirs = [ "documents" ];
         articleDirs = ["articles" "misc"];
