@@ -1,7 +1,8 @@
 ---
-title: Don't use NixOS
+title: You Don't Need NixOS
 date: 2024-07-24
 keywords: [nix, nixos, linux]
+subtitle: _Why you should consider Nix Devshells and Home-Manager rather than NixOS if you want to get into Nix_
 ---
 
 > You're on vacation and you wish to get some food. You find a restaurant,
