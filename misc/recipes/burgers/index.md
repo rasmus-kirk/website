@@ -25,6 +25,7 @@ Optional:
 4. Toast the bread
 
 > **Note:**
+>
 > Other types of ground meat are surprisingly okay. Breaded ground chicken patties especially
 
 > View this page [in markdown](./index.md)

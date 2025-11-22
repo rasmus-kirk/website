@@ -11,7 +11,7 @@ subtitle: _Dish for 4 people_
 - 2 dl green lentils
 - 50 g of butter
 - 800 g of chicken thigh
-- 10 g (1 L) Chicken Boullion
+- 2x10 g (1 L) chicken boullion cubes
 - 0.2 L of water
 - 15 g of parmesan
 - Salt & Pepper

@@ -10,11 +10,15 @@ subtitle: _Dish for 4 people_
 - 1 L water
 - 300 g fine chopped onions
 - 450 g of chicken
-- 4x5 g chickenboullion dice (2 L)
+- 4x10 g (2 L) chicken boullion cubes
 - 250 g of frozen peas
 - 250 g of frozen edamambeans
-- 250 g of carrots
+- 250 g of carrots (Not frozen!)
 - 350 g brown rice
+
+> **Tip:**
+>
+> Use frozen onions, it saves time and doesn't matter much when they're fried.
 
 **Spices:**
 

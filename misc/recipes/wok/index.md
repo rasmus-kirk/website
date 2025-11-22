@@ -20,7 +20,7 @@ feel it's salty enough.
 
 **Spices:**
 
-- 10 g of chicken broth cubes (1 L)
+- 2x10 g (1 L) chicken bullion cubes
 - 30 ml soy sauce
 - 50 g red curry paste
 - 20 g or 4 cloves of garlic
