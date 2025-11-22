@@ -15,11 +15,9 @@ subtitle: _Dish for 4 people_
 - 500g of sour cream
 
 > **Tip:**
->
 > Use frozen onions, it saves time and doesn't matter much when they're fried.
 
 > **Note:**
->
 > Fresh bellpepper is better, but more cumbersome. Squash is also good.
 
 **Steps:**

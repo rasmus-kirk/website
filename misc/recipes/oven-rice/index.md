@@ -17,7 +17,6 @@ subtitle: _Dish for 4 people_
 - 350 g brown rice
 
 > **Tip:**
->
 > Use frozen onions, it saves time and doesn't matter much when they're fried.
 
 **Spices:**
