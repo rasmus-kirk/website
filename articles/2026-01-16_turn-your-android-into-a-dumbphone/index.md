@@ -1,7 +1,7 @@
 ---
 title: Turn Your Android into a Dumb-Phone
 date: 2026-01-16
-subtitle: "_Reclaiming my focus: How I turned my smartphone into a tool rather than a distraction_"
+subtitle: "_Beyond discipline: My journey from digital distraction to a customized minimalist smartphone_"
 ---
 
 For all of my life I have oscilated between a full smart phone experience and

@@ -6,8 +6,8 @@ Welcome to my blog. These are the articles I've written
 
 - **2026-01-16:** [Turn Your Android into a Dumb-Phone](/articles/2026-01-16_turn-your-android-into-a-dumbphone)
 
-> Reclaiming my focus: How I turned my smartphone into a tool rather than
-  a distraction.
+> Beyond discipline: My journey from digital distraction to a customized
+  minimalist smartphone.
 
 - **2025-06-18:** [Lasso Transactions as an alternative to Copyright](/articles/2025-06-18_lasso-transactions-as-an-alternative-to-copyright)  
 
