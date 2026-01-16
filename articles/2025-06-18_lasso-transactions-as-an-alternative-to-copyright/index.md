@@ -99,6 +99,8 @@ to the free-rider problem. The core benefits of Lasso Transactions are:
   The expiration date creates a natural deadline, holding creators accountable
   without relying on centralized enforcement.
 
+> This article is also available [in raw markdown](./index.md)
+
 [^1]: Vitalik has also proposed a [Harberger's
       tax](https://vitalik.eth.limo/general/2024/04/01/dc.html)
       for similar purposes. [See

@@ -83,3 +83,5 @@ put restrictions on my laptop or other main computing devices. However,
 locking down your smartphone can help, especially on the go. I wouldn't say
 I miss any aspect of my smartphone being entirely unlocked, except for the
 possibility of GrapheneOS which lessens all of the Google spying.
+
+> This article is also available [in raw markdown](./index.md)
