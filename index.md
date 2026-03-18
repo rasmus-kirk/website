@@ -5,10 +5,9 @@ title: About me
 Hi, I am Rasmus Kirk. I hold a bachelor's degree in Computer Science from
 Aarhus University, Denmark, and I am currently pursuing a master's degree
 with a specialization in Cryptography (specifically SNARKs) and Formal
-Software Verification, that I will finish January 2026. I have been working
+Software Verification, that I will finish March 2026. I have been working
 part-time as a student worker at Concordium, a cryptocurrency firm, for about
-three years. I like Rust and I am also currently learning Japanese. I am
-currently learning Lasso/Jolt.
+three years. I like Rust and I am also currently learning Japanese.
 
 Here is a list of some of my software interests:
 
@@ -18,11 +17,16 @@ Here is a list of some of my software interests:
 - Zero-Knowledge Proofs
 - Free and Open Software
 - Functional Programming
-- Linux
 - NixOS
+- Linux
 
 Some notable projects:
 
+- [Roping in Lasso](https://lasso.rasmuskirk.com/report/report.pdf): An
+  accessible guide to Lasso, which enables lookup arguments from much larger
+  tables than previously possible. Lasso is the primary component of Jolt,
+  the SNARK‑based virtual machine (zkVM) that proves correct execution
+  for RISC-V programs via large table lookups
 - [My Master's thesis](https://halo.rasmuskirk.com/thesis/thesis.pdf):
   Where I implemented the Halo2 proof system and used it to prove correct
   blockchain light node catch-up.
