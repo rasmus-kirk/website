@@ -1,13 +1,13 @@
 ---
-title: About me
+title: Resume
 ---
 
 Hi, I am Rasmus Kirk. I hold a bachelor's degree in Computer Science from
-Aarhus University, Denmark, and I am currently pursuing a master's degree
-with a specialization in Cryptography (specifically SNARKs) and Formal
-Software Verification, that I will finish March 2026. I have been working
-part-time as a student worker at Concordium, a cryptocurrency firm, for about
-three years. I like Rust and I am also currently learning Japanese.
+Aarhus University, Denmark, and I am currently pursuing a master's degree with
+a specialization in Cryptography (specifically SNARKs) and Formal Software
+Verification, that I will finish March 2026. I have been working part-time
+as a student worker at Concordium, a cryptocurrency firm, for about three
+years, primarily writing in Rust.
 
 Here is a list of some of my software interests:
 
@@ -54,4 +54,3 @@ Feel free to explore my projects and reach out if you have any questions.
 
 - **Email:** mail@rasmuskirk.com
 - **Phone number:** +45 50 16 93 79
-- **Matrix:** [@tuisto:matrix.org](https://matrix.to/#/@tuisto:matrix.org)
