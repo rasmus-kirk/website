@@ -1,5 +1,5 @@
 ---
-title: Resume
+title: About Me
 ---
 
 Hi, I am Rasmus Kirk. I hold a bachelor's degree in Computer Science from
@@ -49,6 +49,20 @@ Some notable projects:
   An open source rust program that keeps your speakers active.
 
 Feel free to explore my projects and reach out if you have any questions.
+
+## Experience
+
+Student Software Engineer | Concordium
+October 2022 – March 2026 (approx. 3.5 years)
+
+- **Smart contract tooling:** Mainly around testing and building infrastructure related to the WebAssembly smart contracts.
+
+- **SDK Development** - Maintaining and expanding the capabilities of the SDK's (Rust, JS, Dotnet).
+
+- **Rust Services** Fixing and expanding various Rust-based services.
+
+I've also participated in discussions with the Science Team related practical
+applications to the SNARK-based studies I've been pursuing in my Masters.
 
 # Contact
 
