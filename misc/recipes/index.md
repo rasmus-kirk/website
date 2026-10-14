@@ -26,6 +26,7 @@ list of my recipes:
 
 - [Burgers](./burgers)
 - [Oven Lentils](./oven-lentils)
+- [Mushroom Mash](./mushroom-mash)
 
 See also the [Mega Cookbook](./mega-cookbook); Some recipes me and some
 friends made when we moved out from our parents, with absurdly large portions.
